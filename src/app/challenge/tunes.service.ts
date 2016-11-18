@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TunesService {
 
-  constructor() { }
+  constructor() {
+  }
 
   getTuneForIndex(index: number): Tune {
     const indexZeroBased = index - 1;

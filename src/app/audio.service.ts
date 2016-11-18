@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
 export class AudioService {
 
   private audioContext: AudioContext;
-  
+
   constructor() {
     const context = this.getAudioContext();
     if (context) {

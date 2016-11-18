@@ -16,4 +16,5 @@ import { ChallengeStartComponent } from './start.component';
     ChallengeStartComponent,
   ],
 })
-export class ChallengeModule { }
+export class ChallengeModule {
+}

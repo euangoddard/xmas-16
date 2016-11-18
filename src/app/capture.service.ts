@@ -8,7 +8,7 @@ import { AudioService } from "./audio.service";
 export class CaptureService {
 
   private static BASE_FREQUNECY = 440;
-  
+
   private isMicrophoneInUse = false;
 
   private frameId: number;
@@ -16,7 +16,7 @@ export class CaptureService {
   private micStream;
 
   private sourceAudioNode;
-  
+
   private analyserAudioNode: AnalyserNode;
 
   private noteSubject: Subject<string> = new Subject();
@@ -62,7 +62,7 @@ export class CaptureService {
       }
       else {
         this.reportError('It looks like this browser does not support getUserMedia. ' +
-        'Check <a href="http://caniuse.com/#feat=stream">http://caniuse.com/#feat=stream</a> for more info.');
+          'Check <a href="http://caniuse.com/#feat=stream">http://caniuse.com/#feat=stream</a> for more info.');
       }
     }
   };
@@ -99,7 +99,7 @@ export class CaptureService {
     // the notes we have in the notes.json file.
     const n = 1024;
     let bestK = -1;
-    let  bestR = 0;
+    let bestR = 0;
     for (let k = 8; k <= 1000; k++) {
       let sum = 0;
 

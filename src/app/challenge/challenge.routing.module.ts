@@ -3,11 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChallengeComponent } from './challenge.component';
 import { ChallengeStartComponent } from './start.component';
 import { TuneResolver } from './tune.resolver';
-import { TunesService } from './tunes.service'; 
+import { TunesService } from './tunes.service';
 
 const routes: Routes = [
   {
-    path: ':id', 
+    path: ':id',
     resolve: {
       tune: TuneResolver,
     },
@@ -22,4 +22,5 @@ const routes: Routes = [
   providers: [TuneResolver, TunesService],
   exports: [RouterModule]
 })
-export class ChallengeRoutingModule { }
+export class ChallengeRoutingModule {
+}

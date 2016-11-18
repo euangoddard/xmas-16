@@ -20,4 +20,5 @@ import { ChallengeModule } from './challenge/challenge.module';
   providers: [NotesService, AudioService, CaptureService],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}

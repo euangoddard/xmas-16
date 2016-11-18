@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   //   { path: '',  component: DashboardComponent },
   {
-    path: 'challenges', 
+    path: 'challenges',
     loadChildren: './challenge/challenge.module#ChallengeModule',
   },
 ];
@@ -12,4 +12,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class RoutingModule { }
+export class RoutingModule {
+}

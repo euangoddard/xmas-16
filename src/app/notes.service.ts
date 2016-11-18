@@ -8,7 +8,7 @@ export class NotesService {
 
   private sourceAudioNode: OscillatorNode;
 
-  private gainNode:GainNode;
+  private gainNode: GainNode;
 
   private isSoundPlaying = false;
 
