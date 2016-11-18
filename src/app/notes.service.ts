@@ -8,12 +8,17 @@ export class NotesService {
 
   private sourceAudioNode: OscillatorNode;
 
+  private gainNode:GainNode;
+
   private isSoundPlaying = false;
 
   private stopTimeoutID;
 
   constructor(private audioService: AudioService) {
-    
+    const context = audioService.context;
+    this.gainNode = context.createGain();
+    this.gainNode.gain.value = 0.3;
+    this.gainNode.connect(context.destination);
   }
 
   playNote(noteName: string, duration: number = 1000): void {
@@ -21,11 +26,10 @@ export class NotesService {
       this.sourceAudioNode.stop();
       clearTimeout(this.stopTimeoutID);
     }
-    const context = this.audioService.context;
     const frequency = this.getFrequencyForNote(noteName);
-    this.sourceAudioNode = context.createOscillator();
+    this.sourceAudioNode = this.audioService.context.createOscillator();
     this.sourceAudioNode.frequency.value = frequency;
-    this.sourceAudioNode.connect(context.destination);
+    this.sourceAudioNode.connect(this.gainNode);
     this.sourceAudioNode.start();
     this.stopTimeoutID = setTimeout(() => {
       this.sourceAudioNode.stop();

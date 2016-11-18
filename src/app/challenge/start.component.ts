@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-
-import { CaptureService } from "../capture.service";
-import { NotesService } from "../notes.service";
+import { CaptureService } from '../capture.service';
+import { NotesService } from '../notes.service';
 
 @Component({
   selector: 'app-challenge-start',
@@ -13,6 +12,8 @@ export class ChallengeStartComponent implements OnInit {
 
   public pitch: number;
 
+  private selectedNoteName: string = null;
+
   constructor(private capture: CaptureService, private notes: NotesService) {
 
   }
@@ -21,13 +22,23 @@ export class ChallengeStartComponent implements OnInit {
     this.capture.startCapture();
     this.capture.notes
       .filter(note => note !== null)
-      .buffer(Observable.interval(500))
+      .buffer(Observable.interval(250))
       .filter(notes => notes.length > 0)
       .map(getMostCommonValue)
       .subscribe(note => this.note = note);
     this.capture.pitches.subscribe(pitch => this.pitch = pitch);
+  }
 
-    //this.notes.playNote('A4');
+  get isNoteSelected(): boolean {
+    return this.selectedNoteName !== null;
+  }
+
+  setSelectedNote(noteName: string): void {
+    this.selectedNoteName = noteName;
+  }
+
+  playSelectedNote(): void {
+    this.notes.playNote(this.selectedNoteName, 750);
   }
 
 }
