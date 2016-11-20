@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChallengeComponent } from './challenge.component';
 import { ChallengeRoutingModule } from './challenge.routing.module';
-import { TunesService } from './tunes.service';
 import { ChallengeStartComponent } from './start.component';
+import { SingingComponent } from './singing.component';
 
 
 @NgModule({
@@ -14,6 +14,7 @@ import { ChallengeStartComponent } from './start.component';
   declarations: [
     ChallengeComponent,
     ChallengeStartComponent,
+    SingingComponent,
   ],
 })
 export class ChallengeModule {

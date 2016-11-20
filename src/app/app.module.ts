@@ -3,10 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { RoutingModule } from './routing.module';
 import { AppComponent } from './app.component';
-import { NotesService } from "./notes.service";
-import { AudioService } from "./audio.service";
-import { CaptureService } from "./capture.service";
-import { ChallengeModule } from './challenge/challenge.module';
+import { NotesService } from './notes.service';
+import { AudioService } from './audio.service';
+import { CaptureService } from './capture.service';
 
 
 @NgModule({

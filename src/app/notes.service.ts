@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { AudioService } from "./audio.service";
-import { NOTES, Note } from "./notes.definition";
+import { Injectable } from '@angular/core';
+import { AudioService } from './audio.service';
+import { NOTES, Note } from './notes.definition';
 
 
 @Injectable()

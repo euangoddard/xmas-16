@@ -8,14 +8,17 @@ import { NotesService } from '../notes.service';
   templateUrl: './start.component.html',
 })
 export class ChallengeStartComponent implements OnInit {
+
   public note: string;
 
   public pitch: number;
 
-  private selectedNoteName: string = null;
+  public selectedNoteName: string = null;
 
-  constructor(private capture: CaptureService, private notes: NotesService) {
-
+  constructor(
+    private capture: CaptureService,
+    private notes: NotesService,
+    ) {
   }
 
   ngOnInit() {
@@ -33,8 +36,8 @@ export class ChallengeStartComponent implements OnInit {
     return this.selectedNoteName !== null;
   }
 
-  setSelectedNote(noteName: string): void {
-    this.selectedNoteName = noteName;
+  setSelectedNote(note: string) {
+    this.selectedNoteName = note;
   }
 
   playSelectedNote(): void {

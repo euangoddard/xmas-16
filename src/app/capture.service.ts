@@ -1,19 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from "rxjs";
-import { HIGHEST_FREQUENCY, NOTES, Note } from "./notes.definition";
-import { AudioService } from "./audio.service";
+import { Observable, Subject } from 'rxjs';
+import { HIGHEST_FREQUENCY, NOTES, Note } from './notes.definition';
+import { AudioService } from './audio.service';
 
 
 @Injectable()
 export class CaptureService {
 
-  private static BASE_FREQUNECY = 440;
-
   private isMicrophoneInUse = false;
 
   private frameId: number;
-
-  private micStream;
 
   private sourceAudioNode;
 
