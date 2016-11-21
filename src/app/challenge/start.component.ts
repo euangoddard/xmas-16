@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CaptureService } from '../capture.service';
-import { NotesService } from '../notes.service';
+import { NotesService } from '../notes/notes.service';
 
 @Component({
   selector: 'app-challenge-start',
   templateUrl: './start.component.html',
 })
-export class ChallengeStartComponent implements OnInit {
+export class ChallengeStartComponent implements OnInit, OnDestroy {
 
   public note: string;
 
@@ -23,13 +22,12 @@ export class ChallengeStartComponent implements OnInit {
 
   ngOnInit() {
     this.capture.startCapture();
-    this.capture.notes
-      .filter(note => note !== null)
-      .buffer(Observable.interval(250))
-      .filter(notes => notes.length > 0)
-      .map(getMostCommonValue)
-      .subscribe(note => this.note = note);
+    this.capture.notes.filter(note => !!note).subscribe(note => this.note = note);
     this.capture.pitches.subscribe(pitch => this.pitch = pitch);
+  }
+
+  ngOnDestroy() {
+    this.capture.stopCapture();
   }
 
   get isNoteSelected(): boolean {
@@ -44,19 +42,4 @@ export class ChallengeStartComponent implements OnInit {
     this.notes.playNote(this.selectedNoteName, 750);
   }
 
-}
-
-
-function getMostCommonValue(array: Array<any>) {
-  const frequency = {};
-  let maxFrequency = 0;
-  let mostCommonValue;
-  array.forEach(v => {
-    frequency[v] = (frequency[v] || 0) + 1;
-    if (frequency[v] > maxFrequency) {
-      maxFrequency = frequency[v];
-      mostCommonValue = v;
-    }
-  });
-  return mostCommonValue;
 }

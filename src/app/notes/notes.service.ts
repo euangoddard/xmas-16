@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { AudioService } from './audio.service';
-import { NOTES, Note } from './notes.definition';
+import { AudioService } from '../audio.service';
+import { NOTES } from './notes.definition';
+import { Note } from './models';
 
 
 @Injectable()
@@ -21,7 +22,7 @@ export class NotesService {
     this.gainNode.connect(context.destination);
   }
 
-  playNote(noteName: string, duration: number = 1000): void {
+  playNote(noteName: string, duration = 1000): void {
     if (this.isSoundPlaying) {
       this.sourceAudioNode.stop();
       clearTimeout(this.stopTimeoutID);
@@ -40,13 +41,26 @@ export class NotesService {
     this.isSoundPlaying = true;
   }
 
-  private getFrequencyForNote(noteName: string): number {
-    const notesForFrequency = NOTES.filter((note: Note) => {
+  getSemitoneDifference(targetNote: Note, sourceNoteName: string): number {
+    const noteNames = NOTES.map(note => note.name);
+    const sourceNoteIndex = noteNames.indexOf(sourceNoteName);
+    const targetNoteIndex = noteNames.indexOf(targetNote.name);
+    return sourceNoteIndex - targetNoteIndex;
+  }
+
+  private getNoteForName(noteName: string): Note {
+    const applicableNotes = NOTES.filter((note: Note) => {
       return note.name === noteName;
     });
-    if (!notesForFrequency.length) {
+    if (!applicableNotes.length) {
       throw new Error(`Cannot find note "${noteName}"`);
     }
-    return notesForFrequency[0].frequency;
+    return applicableNotes[0];
   }
+
+  private getFrequencyForNote(noteName: string): number {
+    const note = this.getNoteForName(noteName);
+    return note.frequency;
+  }
+
 }

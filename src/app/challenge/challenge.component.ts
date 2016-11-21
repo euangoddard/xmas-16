@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Tune } from './models';
 
-import { Tune } from './tunes.service';
 
 @Component({
   selector: 'app-challenge',

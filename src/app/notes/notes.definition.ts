@@ -1,7 +1,4 @@
-export interface Note {
-  name: string;
-  frequency: number;
-}
+import { Note } from './models';
 
 
 export const NOTES: Note[] = [

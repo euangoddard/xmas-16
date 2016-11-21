@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { HIGHEST_FREQUENCY, NOTES, Note } from './notes.definition';
+import { HIGHEST_FREQUENCY, NOTES } from './notes/notes.definition';
+import { Note } from './notes/models';
 import { AudioService } from './audio.service';
 
 
@@ -27,7 +28,11 @@ export class CaptureService {
   }
 
   get notes(): Observable<string> {
-    return this.noteSubject.asObservable();
+    const notesObservable = this.noteSubject.asObservable();
+    return notesObservable
+      .filter(note => note !== null)
+      .buffer(Observable.interval(120))
+      .map(getMostCommonValue);
   }
 
   stopCapture(): void {
@@ -55,8 +60,7 @@ export class CaptureService {
 
         getUserMedia({audio: true}).then((stream) => this.streamReceived(stream)).catch((err) => this.reportError(err));
         this.isMicrophoneInUse = true;
-      }
-      else {
+      } else {
         this.reportError('It looks like this browser does not support getUserMedia. ' +
           'Check <a href="http://caniuse.com/#feat=stream">http://caniuse.com/#feat=stream</a> for more info.');
       }
@@ -165,8 +169,7 @@ export class CaptureService {
       const note = this.findClosestNote(fundalmentalFreq, NOTES);
       this.updateNote(note.name);
       this.updatePitch(fundalmentalFreq);
-    }
-    else {
+    } else {
       this.updateNote(null);
       this.updatePitch(null);
     }
@@ -186,4 +189,19 @@ export class CaptureService {
     this.detectPitch();
   };
 
+}
+
+
+function getMostCommonValue(array: Array<any>) {
+  const frequency = {};
+  let maxFrequency = 0;
+  let mostCommonValue = null;
+  array.forEach(v => {
+    frequency[v] = (frequency[v] || 0) + 1;
+    if (frequency[v] > maxFrequency) {
+      maxFrequency = frequency[v];
+      mostCommonValue = v;
+    }
+  });
+  return mostCommonValue;
 }

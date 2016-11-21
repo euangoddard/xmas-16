@@ -1,3 +1,16 @@
-<p>
-  singing works!
-</p>
+<div class="tune">
+  <div 
+    class="tune-part" 
+    *ngFor="let part of tune; let index = index"
+    [ngClass]="{current: index === currentIndex}"
+  >
+    <div class="tune-syllable">{{ part.syllable }}</div> 
+    <div class="tune-note">{{ part.note.name }}</div>
+  </div>
+</div>
+
+<div>
+  <h2>{{ note }}</h2>
+  <h2>{{ noteDifference }}</h2>
+  <button type="button" (click)="cheat()">Cheat!</button>
+</div>

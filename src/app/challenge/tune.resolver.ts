@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, Router } from '@angular/router';
-import { Tune, TunesService } from './tunes.service';
+import { TunesService } from './tunes.service';
+import { Tune } from './models';
 
 
 @Injectable()
