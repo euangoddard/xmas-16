@@ -210,5 +210,282 @@ export const TUNES: Tune[] = [
         semitoneDelta: -2
       },
     ]
+  },
+  {
+    name: 'Deck the Hall with Bells of Holly',
+    parts: [
+      {
+        syllable: 'Deck',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'halls',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'with',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'bells',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'of',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'hol-',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'ly.',
+        semitoneDelta: -4
+      },
+      {
+        syllable: 'Fa',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'Tis',
+        semitoneDelta: 7
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'sea-',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'son',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'to',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'be',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'jol-',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'ly',
+        semitoneDelta: -4
+      },
+      {
+        syllable: 'Fa',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'Don',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'we',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'now',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'our',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'gay',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'ap-',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'pa-',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'rel.',
+        semitoneDelta: -5
+      },
+      {
+        syllable: 'Fa',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'la.',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'Deck',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'halls',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'with',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'bells',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'of',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'hol-',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'ly.',
+        semitoneDelta: -4
+      },
+      {
+        syllable: 'Fa',
+        semitoneDelta: 9
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'la',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'la.',
+        semitoneDelta: -2
+      }
+    ]
   }
 ];

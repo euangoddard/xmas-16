@@ -9,8 +9,12 @@
   </div>
 </div>
 
-<div>
+<div *ngIf="!isComplete">
+  <button type="button" (click)="cheat()">Give me a hint!</button>
   <h2>{{ note }}</h2>
-  <h2>{{ noteDifference }}</h2>
-  <button type="button" (click)="cheat()">Cheat!</button>
+  <h3>{{ noteDifference }}</h3>
+</div>
+
+<div *ngIf="isComplete">
+  Congratulations! You sang it all correctly!
 </div>

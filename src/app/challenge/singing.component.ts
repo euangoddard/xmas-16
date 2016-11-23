@@ -4,6 +4,7 @@ import { TunesService } from './tunes.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TuneNote } from './models';
+import { Note } from '../notes/models';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class SingingComponent implements OnInit, OnDestroy {
 
   note: string;
 
-  private canAdvance = true;
+  isComplete = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,18 +32,18 @@ export class SingingComponent implements OnInit, OnDestroy {
     const currentTune = this.route.parent.snapshot.data['tune'];
     this.route.params.subscribe(params => {
       this.tune = this.tunes.getTuneTransposed(currentTune, params['noteName']);
+      this.currentIndex = 0;
+      this.capture.startCapture();
     });
 
-    this.capture.startCapture();
-    this.capture.notes.subscribe(note => {
-      this.note = note;
-      if (this.canAdvance && note === this.tune[this.currentIndex].note.name) {
+    this.capture.notes.subscribe(noteName => {
+      this.note = noteName;
+      if (!this.isComplete && noteName === this.currentNote.name) {
+        if (this.currentIndex === (this.tune.length - 1)) {
+          this.isComplete = true;
+          this.capture.stopCapture();
+        }
         this.currentIndex += 1;
-        this.canAdvance = false;
-      }
-
-      if (!this.canAdvance && note === null) {
-        this.canAdvance = true;
       }
     });
   }
@@ -54,14 +55,17 @@ export class SingingComponent implements OnInit, OnDestroy {
   get noteDifference(): number {
     let semitoneDelta: number = null;
     if (this.note) {
-      const targetNote = this.tune[this.currentIndex].note;
-      semitoneDelta = this.notes.getSemitoneDifference(targetNote, this.note);
+      semitoneDelta = this.notes.getSemitoneDifference(this.currentNote, this.note);
     }
     return semitoneDelta;
   }
 
   cheat() {
-    this.notes.playNote(this.tune[this.currentIndex].note.name, 500);
+    this.notes.playNote(this.currentNote.name, 500);
+  }
+
+  private get currentNote(): Note {
+    return this.tune[this.currentIndex].note;
   }
 
 }

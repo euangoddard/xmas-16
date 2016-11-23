@@ -24,15 +24,18 @@ export class CaptureService {
   }
 
   get pitches(): Observable<number> {
-    return this.pitchSubject.asObservable();
+    return this.pitchSubject.asObservable()
+      .map(pitch => Math.round(pitch))
+      .distinctUntilChanged();
   }
 
   get notes(): Observable<string> {
     const notesObservable = this.noteSubject.asObservable();
     return notesObservable
       .filter(note => note !== null)
-      .buffer(Observable.interval(120))
-      .map(getMostCommonValue);
+      .buffer(Observable.interval(100))
+      .map(getMostCommonValue)
+      .distinctUntilChanged();
   }
 
   stopCapture(): void {
