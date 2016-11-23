@@ -1,4 +1,10 @@
 <h1>
   {{ tune.name }}
 </h1>
+
 <router-outlet></router-outlet>
+
+<nav>
+  <a *ngIf="previousTuneIndex" [routerLink]="['/challenges', previousTuneIndex]">Previous</a>
+  <a *ngIf="nextTuneIndex" [routerLink]="['/challenges', nextTuneIndex]">Next</a>
+</nav>
