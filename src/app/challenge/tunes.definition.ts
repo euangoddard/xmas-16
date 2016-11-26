@@ -487,5 +487,238 @@ export const TUNES: Tune[] = [
         semitoneDelta: -2
       }
     ]
+  },
+  {
+    name: 'All I want for Christmas is you',
+    parts: [
+      {
+        syllable: 'I',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'don\'t',
+        semitoneDelta: 4
+      },
+      {
+        syllable: 'want',
+        semitoneDelta: 3
+      },
+      {
+        syllable: 'a',
+        semitoneDelta: 4
+      },
+      {
+        syllable: 'lot',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'for',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'Christ-',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'mas.',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'There',
+        semitoneDelta: 7
+      },
+      {
+        syllable: 'is',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'just',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'one',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'thing',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'I',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'need.',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'I',
+        semitoneDelta: -4
+      },
+      {
+        syllable: 'don\'t',
+        semitoneDelta: 4
+      },
+      {
+        syllable: 'care',
+        semitoneDelta: 3
+      },
+      {
+        syllable: 'a-',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'bout',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'pres-',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'ents',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'un-',
+        semitoneDelta: 7
+      },
+      {
+        syllable: 'der',
+        semitoneDelta: 3
+      },
+      {
+        syllable: 'neath',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: -4
+      },
+      {
+        syllable: 'Christ-',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'mas',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'tree.',
+        semitoneDelta: -4
+      },
+      {
+        syllable: 'I',
+        semitoneDelta: 4
+      },
+      {
+        syllable: 'just',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'want',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'you',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'for',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'my',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'own',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'more',
+        semitoneDelta: 8
+      },
+      {
+        syllable: 'than',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'you',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'could',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'ev-',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'er',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'know.',
+        semitoneDelta: -4
+      },
+      {
+        syllable: 'Make',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'my',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'wish',
+        semitoneDelta: 3
+      },
+      {
+        syllable: 'come',
+        semitoneDelta: 7
+      },
+      {
+        syllable: 'true.',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'All',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'I',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'want',
+        semitoneDelta: -4
+      },
+      {
+        syllable: 'for',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'Christ-',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'mas',
+        semitoneDelta: 6
+      },
+      {
+        syllable: 'is',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'you.',
+        semitoneDelta: -4
+      }
+    ]
   }
 ];
