@@ -1,24 +1,25 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'semitone-delta',
-  template: `<i class="material-icons md-64" *ngIf="icon">{{ icon }}</i><span class="note-text">{{ deltaAbsolute }}</span>`,
+  template: `{{ arrow }}{{ deltaAbsolute }}`,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SemitoneDeltaComponent {
   @Input() public delta;
 
-  get icon(): string {
-    let iconName: string;
+  get arrow(): string {
+    let arrowChar: string;
     if (this.delta === null) {
-      iconName = null;
+      arrowChar = null;
     } else if (this.delta === 0) {
-      iconName = 'check';
+      arrowChar = '=';
     } else if (0 < this.delta) {
-      iconName = 'expand_less';
+      arrowChar = '↑';
     } else {
-      iconName = 'expand_more';
+      arrowChar = '↓';
     }
-    return iconName;
+    return arrowChar;
   }
 
   get deltaAbsolute(): number {

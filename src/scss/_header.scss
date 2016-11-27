@@ -46,6 +46,10 @@ $header-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
   background-color: material-color(grey, 800);
   box-shadow: $header-shadow;
   padding: 1rem 2rem;
+
+  h2 {
+    margin: 1rem 0;
+  }
 }
 
 .page-header-split {
