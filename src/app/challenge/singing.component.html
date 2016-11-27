@@ -1,20 +1,27 @@
-<div class="tune">
-  <div 
-    class="tune-part" 
-    *ngFor="let part of tune; let index = index"
-    [ngClass]="{current: index === currentIndex}"
-  >
-    <div class="tune-syllable">{{ part.syllable }}</div> 
-    <div class="tune-note">{{ part.note.name }}</div>
-  </div>
-</div>
-
-<div *ngIf="!isComplete">
-  <button type="button" (click)="cheat()">Give me a hint!</button>
-  <h2>{{ note }}</h2>
-  <h3>{{ noteDifference }}</h3>
-</div>
-
-<div *ngIf="isComplete">
+<header class="page-header page-header-split" *ngIf="!isComplete">
+  <h2 class="note">♪ = <span class="note-text" [innerHTML]="note | noteSymbol"></span></h2>
+  <h2 class="note">{{ noteDifference }}</h2>
+</header>
+<header class="page-header" *ngIf="isComplete">
   Congratulations! You sang it all correctly!
-</div>
+</header>
+
+<main class="content">
+  <div class="tune">
+    <div 
+      class="tune-part" 
+      *ngFor="let part of tune; let index = index"
+      [ngClass]="{current: index === currentIndex}"
+    >
+      <div class="tune-syllable">{{ part.syllable }}</div> 
+      <div class="tune-note">{{ part.note.name }}</div>
+    </div>
+  </div>
+
+  <button 
+    *ngIf="!isComplete" 
+    class="button" 
+    type="button" 
+    (click)="cheat()"
+  >Give me a hint!</button>
+</main>

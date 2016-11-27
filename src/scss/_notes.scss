@@ -1,0 +1,13 @@
+@import "functions/material-color";
+
+.note {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.note-selected {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $material-color-divider;
+}

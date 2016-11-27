@@ -4,6 +4,7 @@ import { ChallengeComponent } from './challenge.component';
 import { ChallengeRoutingModule } from './challenge.routing.module';
 import { ChallengeStartComponent } from './start.component';
 import { SingingComponent } from './singing.component';
+import { NoteSymbolPipe } from './note-symbol.pipe';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { SingingComponent } from './singing.component';
     ChallengeComponent,
     ChallengeStartComponent,
     SingingComponent,
+    NoteSymbolPipe,
   ],
 })
 export class ChallengeModule {

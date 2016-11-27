@@ -1,0 +1,24 @@
+.material-icons {
+  @each $size in (18, 24, 36, 48) {
+    &.md-#{$size} {
+      font-size: $size * 1px;
+    }
+  }
+
+  &.md-dark { 
+    color: rgba(0, 0, 0, 0.54);
+
+    &.md-inactive { 
+      color: rgba(0, 0, 0, 0.26); 
+    }
+  }
+
+  &.md-light { 
+    color: rgba(255, 255, 255, 1);
+
+    &.md-inactive { 
+      color: rgba(255, 255, 255, 0.3); 
+    }
+  }
+
+}

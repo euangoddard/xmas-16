@@ -1,0 +1,29 @@
+@import "functions/material-color";
+
+
+.tune {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: top;
+  padding: 1rem 0;
+}
+
+.tune-part {
+  padding: 1rem;
+  text-align: center;
+
+  &.current {
+    color: material-color(green, A400);
+    text-shadow: 0 0 15px material-color(grey, 900);
+  }
+}
+
+.tune-syllable {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.tune-note {
+  font-style: italic;
+}
