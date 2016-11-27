@@ -720,5 +720,14 @@ export const TUNES: Tune[] = [
         semitoneDelta: -4
       }
     ]
+  },
+  {
+    name: 'Debug',
+    parts: [
+      {
+        syllable: 'Test',
+        semitoneDelta: 0
+      }
+    ]
   }
 ];

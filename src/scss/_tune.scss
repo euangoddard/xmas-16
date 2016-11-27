@@ -10,7 +10,7 @@
 }
 
 .tune-part {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
 
   &.current {
@@ -20,10 +20,14 @@
 }
 
 .tune-syllable {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
 .tune-note {
-  font-style: italic;
+  color: material-color(grey, 600);
+
+  .current & {
+    color: inherit;
+  }
 }
