@@ -1,6 +1,8 @@
 <header class="page-header page-header-split" *ngIf="!isComplete">
-  <h2 class="note">♪ = <span class="note-text" [innerHTML]="note | noteSymbol"></span></h2>
-  <h2 class="note">{{ noteDifference }}</h2>
+  <h2 class="note">♪ = <span [innerHTML]="note | noteSymbol"></span></h2>
+  <h2 class="note">
+    <semitone-delta [delta]="noteDifference"></semitone-delta>
+    </h2>
 </header>
 <header class="page-header" *ngIf="isComplete">
   Congratulations! You sang it all correctly!

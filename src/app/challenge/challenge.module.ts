@@ -1,3 +1,4 @@
+import { SemitoneDeltaComponent } from './delta.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChallengeComponent } from './challenge.component';
@@ -16,6 +17,7 @@ import { NoteSymbolPipe } from './note-symbol.pipe';
     ChallengeComponent,
     ChallengeStartComponent,
     SingingComponent,
+    SemitoneDeltaComponent,
     NoteSymbolPipe,
   ],
 })
