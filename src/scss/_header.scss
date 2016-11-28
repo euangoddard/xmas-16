@@ -2,18 +2,24 @@
 
 $header-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 
-.header {
-  display: flex;
-
+%header {
   color: #fff;
+
+  flex-shrink: 0;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-shadow: $header-shadow;
+}
+
+.header {
+  @extend %header;
+
+  display: flex;
+  
   background-color: material-color(green, 500);
 
   padding: 0 1rem;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  box-shadow: $header-shadow;
 }
 
 .header-icon {
@@ -42,9 +48,9 @@ $header-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 
 .page-header {
-  color: #fff;
+  @extend %header;
   background-color: material-color(grey, 800);
-  box-shadow: $header-shadow;
+
   padding: 1rem 2rem;
 
   h2 {
