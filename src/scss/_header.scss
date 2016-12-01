@@ -6,7 +6,7 @@ $header-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
   color: #fff;
 
   flex-shrink: 0;
-  
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-shadow: $header-shadow;
@@ -16,8 +16,8 @@ $header-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
   @extend %header;
 
   display: flex;
-  
-  background-color: material-color(green, 500);
+
+  background-color: material-color(green, 600);
 
   padding: 0 1rem;
 }
@@ -49,6 +49,10 @@ $header-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 
 .page-header {
   @extend %header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: material-color(grey, 800);
 
   padding: 1rem 2rem;
@@ -56,10 +60,4 @@ $header-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
   h2 {
     margin: 1rem 0;
   }
-}
-
-.page-header-split {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }

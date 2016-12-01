@@ -1,29 +1,35 @@
-<header class="page-header page-header-split" *ngIf="!isComplete">
-  <h2 class="note">♪ = <span [innerHTML]="note | noteSymbol"></span></h2>
+<header class="page-header" *ngIf="!isComplete">
   <h2 class="note">
+    ♪ <span [innerHTML]="note | noteSymbol"></span>
     <semitone-delta [delta]="noteDifference"></semitone-delta>
   </h2>
+
 </header>
 <header class="page-header" *ngIf="isComplete">
-  <h2>Congratulations! You sang it all correctly!</h2>
+  <h2 class="note">Congratulations! You sang it all correctly!</h2>
 </header>
 
 <main class="content">
+  <p class="tune-hint">
+    <strong>Hint:</strong>
+    To hear how the note should sound, press
+    <i class="material-icons md-16">volume_up</i> next to the note.
+  </p>
   <div class="tune">
-    <div 
-      class="tune-part" 
+    <div
+      class="tune-part"
       *ngFor="let part of tune; let index = index"
       [ngClass]="{current: index === currentIndex}"
     >
-      <div class="tune-syllable">{{ part.syllable }}</div> 
-      <div class="tune-note">{{ part.note.name }}</div>
+      <div class="tune-syllable">{{ part.syllable }}</div>
+      <div class="tune-note">
+        {{ part.note.name }}
+        <i
+          *ngIf="!isComplete && index === currentIndex"
+          (click)="cheat()"
+          class="material-icons md-16"
+        >volume_up</i>
+      </div>
     </div>
   </div>
-
-  <button 
-    *ngIf="!isComplete" 
-    class="button" 
-    type="button" 
-    (click)="cheat()"
-  >Give me a hint!</button>
 </main>
