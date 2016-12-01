@@ -1,6 +1,6 @@
 <header class="page-header" *ngIf="!isComplete">
   <h2 class="note">
-    ♪ <span [innerHTML]="note | noteSymbol"></span>
+    <i class="material-icons md-48">audiotrack</i> <span [innerHTML]="note | noteSymbol"></span>
     <semitone-delta [delta]="noteDifference"></semitone-delta>
   </h2>
 
