@@ -28,11 +28,7 @@ ul {
   margin-bottom: 1rem;
 }
 
-li {
-  font-size: 1rem;
-  line-height: 1.25;
-  margin-bottom: 0.25rem;
-
+%with-links {
   a {
     color: material-color(purple, A700);
 
@@ -41,6 +37,13 @@ li {
       color: material-color(purple, A400);
     }
   }
+}
+
+li {
+  @extend %with-links;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
 }
 
 %flex-column {
@@ -61,6 +64,7 @@ hr {
 }
 
 .extra-info {
+  @extend %with-links;
   font-size: 1rem;
 
   strong {
