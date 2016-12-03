@@ -722,6 +722,235 @@ export const TUNES: Tune[] = [
     ]
   },
   {
+    name: 'The Holly and the Ivy',
+    parts: [
+      {
+        syllable: 'The',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'hol-',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'ly',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'and',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: 9
+      },
+      {
+        syllable: 'i-',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'vy.',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'When',
+        semitoneDelta: -4
+      },
+      {
+        syllable: 'they',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'are',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'both',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'full',
+        semitoneDelta: 9
+      },
+      {
+        syllable: 'grown,',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'Of',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'all',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'trees',
+        semitoneDelta: -4
+      },
+      {
+        syllable: 'that',
+        semitoneDelta: 4
+      },
+      {
+        syllable: 'are',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'in',
+        semitoneDelta: -7
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'wood,',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'The',
+        semitoneDelta: 5
+      },
+      {
+        syllable: 'hol-',
+        semitoneDelta: 4
+      },
+      {
+        syllable: 'ly',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'bears',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'crown.',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'O,',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'ris-',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'ing',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'of',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: 9
+      },
+      {
+        syllable: 'sun,',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'And',
+        semitoneDelta: -7
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'run-',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'ning',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'of',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: 9
+      },
+      {
+        syllable: 'deer.',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'The',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'play-',
+        semitoneDelta: -3
+      },
+      {
+        syllable: 'ing',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'of',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: 4
+      },
+      {
+        syllable: 'mer-',
+        semitoneDelta: -7
+      },
+      {
+        syllable: 'ry',
+        semitoneDelta: 0
+      },
+      {
+        syllable: 'or-',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'gan,',
+        semitoneDelta: 5
+      },
+      {
+        syllable: 'Sweet',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'sing-',
+        semitoneDelta: 2
+      },
+      {
+        syllable: 'ing',
+        semitoneDelta: 1
+      },
+      {
+        syllable: 'in',
+        semitoneDelta: -1
+      },
+      {
+        syllable: 'the',
+        semitoneDelta: -2
+      },
+      {
+        syllable: 'choir.',
+        semitoneDelta: -2
+      }
+    ]
+  },
+  {
     name: 'Debug',
     parts: [
       {
