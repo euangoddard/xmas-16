@@ -5,22 +5,23 @@
     </a>
   </span>
   <h1 class="header-title">{{ tune.name }}</h1>
-  <span class="header-spacer"></span>
-  <a 
-    *ngIf="previousTuneIndex" 
-    [routerLink]="['/challenges', previousTuneIndex]"
-    class="header-link"
-  >
-    <i class="material-icons">chevron_left</i>
-  </a>
-  <a
-    *ngIf="nextTuneIndex"
-    [routerLink]="['/challenges', nextTuneIndex]"
-    class="header-link"
-  >
-    <i class="material-icons">chevron_right</i>
-  </a>
 </header>
 
 <router-outlet></router-outlet>
 
+<footer class="footer">
+  <a 
+    *ngIf="previousTuneIndex" 
+    [routerLink]="['/challenges', previousTuneIndex]"
+    class="footer-link"
+  >
+    <i class="material-icons">chevron_left</i> Previous challenge 
+  </a>
+  <a
+    *ngIf="nextTuneIndex"
+    [routerLink]="['/challenges', nextTuneIndex]"
+    class="footer-link"
+  >
+    Next challenge <i class="material-icons">chevron_right</i>
+  </a>
+</footer>
