@@ -24,6 +24,25 @@ p {
   line-height: 1.5;
 }
 
+ul {
+  margin-bottom: 1rem;
+}
+
+li {
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+
+  a {
+    color: material-color(purple, A700);
+
+    &:hover,
+    &:focus {
+      color: material-color(purple, A400);
+    }
+  }
+}
+
 %flex-column {
   display: flex;
   flex-direction: column; 
@@ -36,6 +55,19 @@ app-root {
   background: material-color(blue-grey, 50);
 }
 
+hr {
+  border-top: 1px solid material-color(blue-grey, 100);
+  margin: 1rem 0;
+}
+
+.extra-info {
+  font-size: 1rem;
+
+  strong {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
 
 
 app-challenge {

@@ -5,6 +5,16 @@
   <h1 class="header-title">Merry Christmas 2016!</h1>
 </header>
 
-<header class="page-header">
-  <p>Something something</p>
-</header>
+<main class="content">
+  <h2>Merry Christmas!</h2>
+  <p>Wishing you a very Merry Christmas and a Properous 2017</p>
+  <hr>
+  <p>To celebrate the festive season, you can test your singing (or whilstling or humming) ability to croon along to some Christmas tunes.</p>
+  <h3>Pick a challenge to get started</h3>
+  <p class="extra-info"><strong>Note:</strong> You will need to allow this app to access your microphone the first time you start a challenge.</p>
+  <ul>
+    <li *ngFor="let tune of tunes; let i = index">
+      <a [routerLink]="['challenges', i + 1]">{{ tune.name }}</a>
+    </li>
+  </ul>
+</main>

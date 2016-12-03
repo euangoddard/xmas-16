@@ -17,7 +17,7 @@
   </button>
 
   <section class="note-selected" *ngIf="isNoteSelected">
-    <h3>Starting note: {{ selectedNoteName }} <i class="material-icons" (click)="playSelectedNote()">volume_up</i></h3>
+    <h3>Starting note: {{ selectedNoteName }} <i class="material-icons clickable" (click)="playSelectedNote()">volume_up</i></h3>
     <p>Once you're happy with the note, hit <strong>Start challenge</strong>.</p>
     <div class="buttons">
       <a class="button" [routerLink]="['./sing', selectedNoteName]">
