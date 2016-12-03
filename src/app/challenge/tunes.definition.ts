@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { Tune } from './models';
 
 
@@ -949,8 +950,12 @@ export const TUNES: Tune[] = [
         semitoneDelta: -2
       }
     ]
-  },
-  {
+  }
+];
+
+
+if (!environment.production) {
+  TUNES.push({
     name: 'Debug',
     parts: [
       {
@@ -958,5 +963,5 @@ export const TUNES: Tune[] = [
         semitoneDelta: 0
       }
     ]
-  }
-];
+  });
+}
