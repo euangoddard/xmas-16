@@ -15,9 +15,9 @@ export class SemitoneDeltaComponent {
     } else if (this.delta === 0) {
       arrowName = 'check';
     } else if (0 < this.delta) {
-      arrowName = 'arrow_upward';
-    } else {
       arrowName = 'arrow_downward';
+    } else {
+      arrowName = 'arrow_upward';
     }
     return arrowName;
   }
