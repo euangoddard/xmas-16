@@ -99,3 +99,13 @@ app-singing {
   @extend %flex-spring;
   padding: 1.5rem;
 }
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .note {
+    margin: 1rem 0;
+  }
+}
