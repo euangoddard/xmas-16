@@ -952,7 +952,7 @@ export const TUNES: Tune[] = [
     ]
   },
   {
-    name: 'God Rest Ye Merry, Gentlemen',
+    name: 'God Rest Ye Merry Gentlemen',
     parts: [
       {
         semitoneDelta: 0,
