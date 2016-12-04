@@ -950,6 +950,255 @@ export const TUNES: Tune[] = [
         semitoneDelta: -2
       }
     ]
+  },
+  {
+    name: 'God Rest Ye Merry, Gentlemen',
+    parts: [
+      {
+        semitoneDelta: 0,
+        syllable: 'God'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'rest'
+      },
+      {
+        semitoneDelta: 7,
+        syllable: 'ye'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'mer-'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'ry'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'gen-'
+      },
+      {
+        semitoneDelta: -1,
+        syllable: 'tle-'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'men,'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'let'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'noth-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'ing'
+      },
+      {
+        semitoneDelta: 1,
+        syllable: 'you'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'dis-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'may,'
+      },
+      {
+        semitoneDelta: -7,
+        syllable: 're-'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'mem-'
+      },
+      {
+        semitoneDelta: 7,
+        syllable: 'ber'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'Christ'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'our'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'Sav-'
+      },
+      {
+        semitoneDelta: -3,
+        syllable: 'iour'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'was'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'born'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'on'
+      },
+      {
+        semitoneDelta: 1,
+        syllable: 'Christ-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'mas'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'day'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'to'
+      },
+      {
+        semitoneDelta: 1,
+        syllable: 'save'
+      },
+      {
+        semitoneDelta: -3,
+        syllable: 'us'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'all'
+      },
+      {
+        semitoneDelta: 1,
+        syllable: 'from'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'Sa-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'tan\'s'
+      },
+      {
+        semitoneDelta: -5,
+        syllable: 'power'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'when'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'we'
+      },
+      {
+        semitoneDelta: -3,
+        syllable: 'were'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'gone'
+      },
+      {
+        semitoneDelta: 1,
+        syllable: 'a-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'stray.'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'O'
+      },
+      {
+        semitoneDelta: 4,
+        syllable: 'ti-'
+      },
+      {
+        semitoneDelta: 1,
+        syllable: 'dings'
+      },
+      {
+        semitoneDelta: -1,
+        syllable: 'of'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'com-'
+      },
+      {
+        semitoneDelta: -4,
+        syllable: 'fort'
+      },
+      {
+        semitoneDelta: -1,
+        syllable: 'and'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'joy,'
+      },
+      {
+        semitoneDelta: 3,
+        syllable: 'com-'
+      },
+      {
+        semitoneDelta: -1,
+        syllable: 'fort'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'and'
+      },
+      {
+        semitoneDelta: 5,
+        syllable: 'joy'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'O'
+      },
+      {
+        semitoneDelta: 4,
+        syllable: 'ti-'
+      },
+      {
+        semitoneDelta: 3,
+        syllable: 'dings'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'of'
+      },
+      {
+        semitoneDelta: -5,
+        syllable: 'com-'
+      },
+      {
+        semitoneDelta: -4,
+        syllable: 'fort'
+      },
+      {
+        semitoneDelta: -1,
+        syllable: 'and'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'joy'
+      },
+    ],
   }
 ];
 
