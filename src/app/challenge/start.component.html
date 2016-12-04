@@ -7,14 +7,16 @@
     </p>
   <p>When you're happy press <strong>Pick starting note</strong></p>
 
-  <h2 class="note">
-    <i class="material-icons md-48">audiotrack</i>
-    <span class="note-text" [innerHTML]="note | noteSymbol"></span>
-  </h2>
+  <section class="side-by-side">
+    <h2 class="note">
+      <i class="material-icons md-48">audiotrack</i>
+      <span class="note-text" [innerHTML]="note | noteSymbol"></span>
+    </h2>
 
-  <button class="button" type="button" [disabled]="!note" (click)="setSelectedNote(note)">
-    Pick starting note
-  </button>
+    <button class="button" type="button" [disabled]="!note" (click)="setSelectedNote(note)">
+      Pick starting note
+    </button>
+  </section>
 
   <section class="note-selected" *ngIf="isNoteSelected">
     <h3>Starting note: {{ selectedNoteName }} <i class="material-icons clickable" (click)="playSelectedNote()">volume_up</i></h3>

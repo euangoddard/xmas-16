@@ -22,7 +22,7 @@ export class AudioService {
 
   private getAudioContext() {
     let context;
-    context = AudioContext || window['webkitAudioContext'] || null;
+    context = window['AudioContext'] || window['webkitAudioContext'] || null;
     return context;
   }
 }
