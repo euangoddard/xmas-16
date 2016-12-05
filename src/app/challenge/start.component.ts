@@ -1,3 +1,5 @@
+import { ActivatedRoute } from '@angular/router';
+import { TunesService } from './tunes.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CaptureService } from '../capture.service';
 import { NotesService } from '../notes/notes.service';
@@ -15,8 +17,10 @@ export class ChallengeStartComponent implements OnInit, OnDestroy {
   public selectedNoteName: string = null;
 
   constructor(
+    private route: ActivatedRoute,
     private capture: CaptureService,
     private notes: NotesService,
+    private tunes: TunesService,
     ) {
   }
 
@@ -40,6 +44,26 @@ export class ChallengeStartComponent implements OnInit, OnDestroy {
 
   playSelectedNote(): void {
     this.notes.playNote(this.selectedNoteName, 750);
+  }
+
+  get canTransposeTune(): boolean {
+    const currentTune = this.route.parent.snapshot.data['tune'];
+    let canTranspose: boolean;
+    if (this.isNoteSelected) {
+      try {
+        this.tunes.getTuneTransposed(currentTune, this.selectedNoteName);
+        canTranspose = true;
+      } catch (e) {
+        if (e instanceof RangeError) {
+          canTranspose = false;
+        } else {
+          throw e;
+        }
+      }
+    } else {
+      canTranspose = false;
+    }
+    return canTranspose;
   }
 
 }

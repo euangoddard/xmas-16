@@ -19,9 +19,14 @@ export class TunesService {
     let noteIndex = this.getIndexForNoteName(noteName);
     const tuneNotes = tune.parts.map((part): TuneNote => {
       noteIndex += part.semitoneDelta;
+      const note = NOTES[noteIndex];
+      if (!note) {
+        throw new RangeError('Cannot transpose tune. Note out of range');
+      }
+
       return {
         syllable: part.syllable,
-        note: NOTES[noteIndex]
+        note: note
       };
     });
     return tuneNotes;
