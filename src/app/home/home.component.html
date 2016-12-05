@@ -11,14 +11,23 @@
   <hr>
   <p>To celebrate the festive season, you can test your singing (or whistling or
     humming) ability to croon along to some Christmas tunes.</p>
-  <h3>Pick a challenge to get started</h3>
-  <p class="extra-info"><strong>Note:</strong> You will need to allow this app
-    to access your microphone the first time you start a challenge.</p>
-  <ul>
-    <li *ngFor="let tune of tunes; let i = index">
-      <a [routerLink]="['challenges', i + 1]">{{ tune.name }}</a>
-    </li>
-  </ul>
+  <section *ngIf="isCaptureSupported">
+    <h3>Pick a challenge to get started</h3>
+    <p class="extra-info"><strong>Note:</strong> You will need to allow this app
+      to access your microphone the first time you start a challenge.</p>
+    <ul>
+      <li *ngFor="let tune of tunes; let i = index">
+        <a [routerLink]="['challenges', i + 1]">{{ tune.name }}</a>
+      </li>
+    </ul>
+  </section>
+  <section *ngIf="!isCaptureSupported">
+    <h3>Oh no!</h3>
+    <p>
+      Looks like your browser doesn't support the technologies required to play
+      the challenges. Please try Chrome or Firefox instead.
+    </p>
+  </section>
   <hr>
   <h3>Thanks</h3>
   <p class="extra-info">

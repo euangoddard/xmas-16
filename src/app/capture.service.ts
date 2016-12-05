@@ -52,7 +52,7 @@ export class CaptureService {
 
   startCapture(): void {
     if (!this.isMicrophoneInUse) {
-      if (this.isGetUserMediaSupported()) {
+      if (this.audioService.isGetUserMediaSupported()) {
         const getUserMedia = navigator.mediaDevices && navigator.mediaDevices.getUserMedia ?
           navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices) :
           function (constraints) {
@@ -80,15 +80,6 @@ export class CaptureService {
 
   private reportError(message: string): void {
     console.error(message);
-  };
-
-  private isGetUserMediaSupported(): boolean {
-    navigator.getUserMedia = navigator.getUserMedia || navigator['webkitGetUserMedia'] || navigator['mozGetUserMedia'];
-    if ((navigator.mediaDevices && navigator.mediaDevices.getUserMedia) || navigator.getUserMedia) {
-      return true;
-    }
-
-    return false;
   };
 
   private findFundamentalFreq(buffer: Uint8Array, sampleRate: number): number {
