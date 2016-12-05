@@ -48,7 +48,7 @@ li {
 
 %flex-column {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 app-root {
@@ -76,7 +76,7 @@ hr {
 
 app-challenge {
   @extend %flex-column;
-  height: 100vh; 
+  height: 100vh;
 }
 
 
@@ -108,4 +108,8 @@ app-singing {
   .note {
     margin: 1rem 0;
   }
+}
+
+.loading {
+  padding: 1.5rem;
 }
