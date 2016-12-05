@@ -386,6 +386,26 @@ export const NOTES: Note[] = [
     name: 'B7',
     frequency: 3951.07
   },
+  {
+    name: 'C8',
+    frequency: 4186.01
+  },
+  {
+    name: 'C#8',
+    frequency: 4434.92
+  },
+  {
+    name: 'D8',
+    frequency: 4698.63
+  },
+  {
+    name: 'D#8',
+    frequency: 4978.03
+  },
+  {
+    name: 'E8',
+    frequency: 5274.04
+  }
 ];
 
 
