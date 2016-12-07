@@ -1204,6 +1204,160 @@ export const TUNES: Tune[] = [
         syllable: 'joy'
       },
     ],
+  },
+  {
+    name: 'Jingle-bell rock',
+    url: 'https://www.youtube.com/watch?v=h81UOjlFmMs',
+    parts: [
+      {
+        semitoneDelta: 0,
+        syllable: 'Jin-'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'gle-'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'bell,'
+      },
+      {
+        semitoneDelta: -1,
+        syllable: 'jin-'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'gle-'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'bell,'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'jin-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'gle-'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'bell'
+      },
+      {
+        semitoneDelta: -5,
+        syllable: 'rock,'
+      },
+      {
+        semitoneDelta: 5,
+        syllable: 'jin-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'gle-'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'bell'
+      },
+      {
+        semitoneDelta: -5,
+        syllable: 'swing'
+      },
+      {
+        semitoneDelta: 3,
+        syllable: 'and'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'jin-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'gle-'
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'bells'
+      },
+      {
+        semitoneDelta: -4,
+        syllable: 'ring.'
+      },
+      {
+        semitoneDelta: -3,
+        syllable: 'Snow-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'in\''
+      },
+      {
+        semitoneDelta: 1,
+        syllable: 'and'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'blow-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'in\''
+      },
+      {
+        semitoneDelta: -2,
+        syllable: 'up'
+      },
+      {
+        semitoneDelta: -5,
+        syllable: 'bush-'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'els'
+      },
+      {
+        semitoneDelta: 1,
+        syllable: 'of'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'fun;'
+      },
+      {
+        semitoneDelta: 2,
+        syllable: 'now'
+      },
+      {
+        semitoneDelta: -1,
+        syllable: 'the'
+      },
+      {
+        semitoneDelta: 1,
+        syllable: 'jin-'
+      },
+      {
+        semitoneDelta: -1,
+        syllable: 'gle-'
+      },
+      {
+        semitoneDelta: 1,
+        syllable: 'hop'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'has'
+      },
+      {
+        semitoneDelta: -6,
+        syllable: 'be-'
+      },
+      {
+        semitoneDelta: 0,
+        syllable: 'gun.'
+      },
+    ]
   }
 ];
 
