@@ -10,6 +10,7 @@ export type TunePart = {
 export type Tune = {
   name: string;
   parts: TunePart[];
+  url: string;
 }
 
 

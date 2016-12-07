@@ -1,3 +1,4 @@
+import { Tune } from './models';
 import { ActivatedRoute } from '@angular/router';
 import { TunesService } from './tunes.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
@@ -16,6 +17,8 @@ export class ChallengeStartComponent implements OnInit, OnDestroy {
 
   public selectedNoteName: string = null;
 
+  public currentTune: Tune;
+
   constructor(
     private route: ActivatedRoute,
     private capture: CaptureService,
@@ -28,6 +31,7 @@ export class ChallengeStartComponent implements OnInit, OnDestroy {
     this.capture.startCapture();
     this.capture.notes.filter(note => !!note).subscribe(note => this.note = note);
     this.capture.pitches.subscribe(pitch => this.pitch = pitch);
+    this.currentTune = this.route.parent.snapshot.data['tune'];
   }
 
   ngOnDestroy() {
@@ -47,11 +51,10 @@ export class ChallengeStartComponent implements OnInit, OnDestroy {
   }
 
   get canTransposeTune(): boolean {
-    const currentTune = this.route.parent.snapshot.data['tune'];
     let canTranspose: boolean;
     if (this.isNoteSelected) {
       try {
-        this.tunes.getTuneTransposed(currentTune, this.selectedNoteName);
+        this.tunes.getTuneTransposed(this.currentTune, this.selectedNoteName);
         canTranspose = true;
       } catch (e) {
         if (e instanceof RangeError) {

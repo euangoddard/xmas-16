@@ -5,6 +5,7 @@ import { Tune } from './models';
 export const TUNES: Tune[] = [
   {
     name: 'Jingle bells',
+    url: 'https://www.youtube.com/watch?v=oxqOXpQOAIM',
     parts: [
       {
         syllable: 'Jin-',
@@ -214,6 +215,7 @@ export const TUNES: Tune[] = [
   },
   {
     name: 'Deck the Hall with Bells of Holly',
+    url: 'https://www.youtube.com/watch?v=RPCXMTnO2Yw',
     parts: [
       {
         syllable: 'Deck',
@@ -491,6 +493,7 @@ export const TUNES: Tune[] = [
   },
   {
     name: 'All I want for Christmas is you',
+    url: 'https://www.youtube.com/watch?v=yXQViqx6GMY',
     parts: [
       {
         syllable: 'I',
@@ -724,6 +727,7 @@ export const TUNES: Tune[] = [
   },
   {
     name: 'The Holly and the Ivy',
+    url: 'https://www.youtube.com/watch?v=l7eHtDtZ7hs',
     parts: [
       {
         syllable: 'The',
@@ -953,6 +957,7 @@ export const TUNES: Tune[] = [
   },
   {
     name: 'God Rest Ye Merry Gentlemen',
+    url: 'https://www.youtube.com/watch?v=IDvEwC0wZ-I',
     parts: [
       {
         semitoneDelta: 0,
@@ -1206,6 +1211,7 @@ export const TUNES: Tune[] = [
 if (!environment.production) {
   TUNES.push({
     name: 'Debug',
+    url: 'http://example.com',
     parts: [
       {
         syllable: 'Test',
